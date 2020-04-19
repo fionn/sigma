@@ -15,15 +15,15 @@
 #include <sstream>
 #include <getopt.h>
 
-#include "field.h"
-#include "histogram.h"
-#include "latticeupdate.h"
-#include "sum.h"
-#include "correlator.h"
-#include "correlate.h"
-#include "print_field.h"
-#include "help.h"
-#include "sigma.h"
+#include "field.hpp"
+#include "histogram.hpp"
+#include "latticeupdate.hpp"
+#include "sum.hpp"
+#include "correlator.hpp"
+#include "correlate.hpp"
+#include "print_field.hpp"
+#include "help.hpp"
+#include "sigma.hpp"
 
 int main(int argc, char *argv[])
 {
@@ -134,14 +134,12 @@ int main(int argc, char *argv[])
                 int size[4];
                 for(; optind < argc && *argv[optind] != '-'; optind++)
                 {
-                    cout << argv[optind] << endl;
                     size[optind - index_start] = atof(argv[optind]);
                     if(size[optind - index_start] <= 0)
                     {
                         cerr << "All spacetime dimensions must be positive.\n";
                         return -1;
                     }
-                    cout << size[optind - index_start] << endl;
                 }
                 if(optind - index_start == 4) 
                 {
@@ -172,7 +170,6 @@ int main(int argc, char *argv[])
             case 'b':
                 cerr << "Set the value of inverse temperature β = 1 / (k_B T)." << endl;
                 cerr << "This option is not implemented. Defaulting to β = 1." << endl; 
-                //return -1;
                 break;
 
             case 'p':
@@ -233,7 +230,7 @@ int main(int argc, char *argv[])
 
         return 0;
     }
-        
+
     for(double lambda = -1.0; lambda <= 1.0; lambda += resolution)
         for(double v = 0.0; v <= 1.0; v += resolution)
         {

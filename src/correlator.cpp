@@ -1,5 +1,5 @@
-#include "field.h"
-#include "correlator.h"
+#include "field.hpp"
+#include "correlator.hpp"
 
 double correlator(Field phi, int d)
 {

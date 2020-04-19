@@ -2,9 +2,9 @@
 #include <sstream>
 #include <fstream>
 
-#include "field.h"
-#include "correlator.h"
-#include "correlate.h"
+#include "field.hpp"
+#include "correlator.hpp"
+#include "correlate.hpp"
 
 void correlate(Field phi, double lambda, double v, 
                std::string start, int updatemax, double delta)

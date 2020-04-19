@@ -1,5 +1,5 @@
-#include "field.h"
-#include "action.h"
+#include "field.hpp"
+#include "action.hpp"
 
 double gradient(Field phi, int x1, int x2, int x3, int x4, int N)
 {

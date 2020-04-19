@@ -1,5 +1,5 @@
 #include <iostream>
-#include "help.h"
+#include "help.hpp"
 
 void help(char* name)
 {

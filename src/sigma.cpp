@@ -3,11 +3,11 @@
 #include <fstream>
 #include <sstream>
 
-#include "field.h"
-#include "latticeupdate.h"
-#include "sum.h"
-#include "print_field.h"
-#include "sigma.h"
+#include "field.hpp"
+#include "latticeupdate.hpp"
+#include "sum.hpp"
+#include "print_field.hpp"
+#include "sigma.hpp"
 
 int sigma(Field phi, double lambda, double v, int updatemax, double delta, bool hotstart, std::stringstream& filename, std::string start, bool printfield, double resolution, time_t mainbegin, time_t mainend)
 {
